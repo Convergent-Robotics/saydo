@@ -1,0 +1,3 @@
+{"_base_config": "scene.yaml", "task_info": {"task_name": "mug_photo", "domain": "home"}, "scene_info": {"simulator": "labutopia"},
+ "safety_level": "S0", "planning_context": {"task_instruction": "-", "initial_setup": [], "object_list": []},
+ "evaluation_goal_conditions": {"execution_goal_condition": "true"}}

@@ -1,0 +1,25 @@
+# The photo the monitor in home_mug_screen shows: a real mug on the kitchen's worktop by the sink,
+# from about eye level. sim/render_photo.py renders it to external/home_assets/mug_photo.png (setup_brev.sh
+# runs it); not committed, as it shows private_meshes geometry (sim/common.py). The robot is parked out of
+# view; `spot` is there because a scene needs an object.
+name: mug_photo
+scenery:
+  - {name: floor, build: {kind: block, size: [6.0, 6.0, 0.02], color: [0.46, 0.34, 0.24], roughness: 0.5}, position: [0, 0, -0.02]}
+  - {name: back_wall, build: {kind: block, size: [0.04, 6.0, 2.7], color: [0.92, 0.91, 0.88]}, position: [0.316, 0, 0]}
+  - {name: kitchen, usd: private_meshes_usd/102-kitchen_run_appliances_long/model.usd, position: [0.0, 1.15, 0.0], yaw: -90}
+  - {name: mug, usd: "isaac:Isaac/Props/YCB/Axis_Aligned/025_mug.usd", position: [-0.06, 0.44, 0.901], yaw: 30, tilt: -90}
+  - {name: plant, usd: "isaac:NVIDIA/Assets/ArchVis/Residential/Plants/Plant_Succulent_01.usd", position: [0.17, 0.62, 0.86]}
+  - {name: towels, usd: "isaac:NVIDIA/Assets/ArchVis/Residential/Kitchen/Kitchenware/StorageAndOrganization/paper_towel.usd", position: [0.17, 0.80, 0.86]}
+render:
+  lights:
+    - {type: dome, intensity: 1100, temperature: 6000}
+    - {type: rect, position: [-1.2, 0.4, 1.7], size: [1.2, 0.8], intensity: 6000, temperature: 5000, rotate_xyz: [0, -60, 0]}
+    - {type: rect, position: [-0.2, 0.3, 2.5], size: [1.6, 1.0], intensity: 9000, temperature: 3600}
+    - {type: rect, position: [0.12, 0.4, 1.36], size: [0.12, 1.6], intensity: 2500, temperature: 3200}
+robot: {type: franka, position: [-3.0, 3.0, 0.0]}
+cameras:
+  - {name: overview, prim_path: /World/spai_overview_camera, resolution: [1024, 1024], translation: [-0.62, 0.30, 1.12], look_at: [-0.02, 0.45, 0.93], focal_length: 3.0}
+  - {name: wrist, prim_path: /World/Franka/panda_hand/arm_camera, resolution: [256, 256], focal_length: 2.2}
+spai:
+  objects:
+    spot: {build: {kind: block, size: [0.02, 0.02, 0.001], color: [0.5, 0.5, 0.5], collide: false}, position: [-0.25, 0.6, 0.86], role: marker, kind: spot}

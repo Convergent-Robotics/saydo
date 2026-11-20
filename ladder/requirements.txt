@@ -1,0 +1,6 @@
+openai          # used only as the OpenRouter client
+python-dotenv
+jsonschema
+pyyaml
+huggingface_hub
+pyarrow

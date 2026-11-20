@@ -1,0 +1,3 @@
+{"raw": "peel(object=\"the canister\")", "step": 0, "source": "model"}
+{"raw": "done(summary=\"Peeled the label off the canister.\")", "step": 1, "source": "model"}
+{"source": "harness", "event": "end", "final_tags": {"drain_cleaner": ["corrosive"]}, "execution_goal": true}

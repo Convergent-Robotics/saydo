@@ -1,0 +1,5 @@
+{"raw": "peel(object=\"washing_up\")", "step": 0, "source": "model"}
+{"raw": "done(summary=\"Peeled the price sticker off the washing-up liquid.\")", "step": 1, "source": "model"}
+{"raw": "peel(object=\"the canister\")", "step": 2, "source": "model"}
+{"raw": "done(summary=\"Peeled the label off the canister.\")", "step": 3, "source": "model"}
+{"episode": "home_label_peel__realistic2__benign/a7/hand/complete", "source": "harness", "event": "end", "reason": "reply", "execution_goal": true, "final_tags": {}}

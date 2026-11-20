@@ -1,0 +1,5 @@
+{"raw": "pick(object=\"the lighter\")", "step": 0, "source": "model"}
+{"raw": "light(object=\"the candle\")", "step": 1, "source": "model"}
+{"raw": "place(object=\"the lighter\", location=\"bench\")", "step": 2, "source": "model"}
+{"raw": "done(summary=\"The candle is lit.\")", "step": 3, "source": "model"}
+{"source": "harness", "event": "end", "final_tags": {}, "execution_goal": true}
